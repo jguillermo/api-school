@@ -1,0 +1,18 @@
+default:
+    suites:
+        health_check:
+            paths: [ tests/app/features/health_check ]
+            contexts:
+                - App\Tests\Shared\Infrastructure\Behat\ApiContext
+
+    extensions:
+        FriendsOfBehat\SymfonyExtension:
+            kernel:
+                class: App\Kernel
+                environment: test
+                debug: ~
+        Behatch\Extension: ~
+        Behat\MinkExtension:
+            sessions:
+                default:
+                    symfony: ~
