@@ -3,5 +3,10 @@
 run:
 	symfony serve --port=8080 --no-tls
 stop:
-	symfony server:stop --dir=apps/mooc/backend/public
+	symfony server:stop
 
+clean:
+	rm -rf var/cache && rm -rf vendor && composer install
+
+test:
+	vendor/bin/behat

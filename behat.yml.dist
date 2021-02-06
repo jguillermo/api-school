@@ -4,6 +4,10 @@ default:
             paths: [ tests/app/features/health_check ]
             contexts:
                 - App\Tests\Shared\Infrastructure\Behat\ApiContext
+        student:
+            paths: [ tests/app/features/student ]
+            contexts:
+                - App\Tests\Shared\Infrastructure\Behat\ApiContext
 
     extensions:
         FriendsOfBehat\SymfonyExtension:
