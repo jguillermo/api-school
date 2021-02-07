@@ -15,7 +15,7 @@ use Symfony\Component\HttpFoundation\Request;
 
 /**
  *
- * @Route("/student")
+ * @Route("/students")
  */
 class StudentController extends AbstractController
 {
