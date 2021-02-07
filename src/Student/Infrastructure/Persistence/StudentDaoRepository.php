@@ -73,13 +73,18 @@ class StudentDaoRepository extends ServiceEntityRepository implements StudentRep
     {
         $list = [];
         foreach ($this->findBy([]) as $dao) {
-            $list[] = $dao > toEntity();
+            $list[] = $dao->toEntity();
         }
         return $list;
     }
 
     public function remove(string $id): void
     {
-        // TODO: Implement remove() method.
+        $studentDao = $this->find($id);
+        if ($studentDao !== null) {
+            $this->getEntityManager()->remove($studentDao);
+            $this->getEntityManager()->flush();
+        }
+
     }
 }
