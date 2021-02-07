@@ -11,6 +11,10 @@ use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Request;
 
+/**
+ *
+ * @Route("/student")
+ */
 class StudentController extends AbstractController
 {
     private $findStudentById;
@@ -24,7 +28,7 @@ class StudentController extends AbstractController
 
 
     /**
-     * @Route("/student/{studentId}", methods={"GET"})
+     * @Route("/{studentId}", methods={"GET"})
      */
     public function getById(string $studentId)
     {
@@ -40,9 +44,9 @@ class StudentController extends AbstractController
     }
 
     /**
-     * @Route("/student/{studentId}", methods={"PUT"})
+     * @Route("/{studentId}", methods={"PUT"})
      */
-    public function creator(string $studentId, Request $request)
+    public function create(string $studentId, Request $request)
     {
         $this->creatorStudent->execute(
                 $studentId,

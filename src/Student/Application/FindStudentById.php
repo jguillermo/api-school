@@ -24,6 +24,6 @@ class FindStudentById
         if($student == null){
             throw new NotFoundHttpException("Student not found");
         }
-        return $student;
+        return new StudentResponse($student);
     }
 }

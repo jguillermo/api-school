@@ -11,3 +11,13 @@ Feature: put student
     """
     Then the response status code should be 201
     And the response should be empty
+
+  Scenario: With student exit
+    Given I send a GET request to "/student/f927465f-c78e-4529-8057-48bfd8f73544"
+    Then the response content should be:
+    """
+    {
+      "id" : "f927465f-c78e-4529-8057-48bfd8f73544",
+      "name" : "Thomas Autry"
+    }
+    """
