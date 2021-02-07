@@ -15,6 +15,7 @@ default:
                 class: App\Kernel
                 environment: test
                 debug: ~
+            bootstrap: config/bootstrap.php
         Behatch\Extension: ~
         Behat\MinkExtension:
             sessions:

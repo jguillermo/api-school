@@ -10,3 +10,9 @@ clean:
 
 test:
 	vendor/bin/behat
+
+migration:
+	bin/console make:migration
+
+migrate:
+	bin/console doctrine:migrations:migrate
