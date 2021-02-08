@@ -3,13 +3,13 @@
 namespace App\Controller;
 
 
+use App\Course\Application\Create\CreateCourseCommand;
+use App\Course\Application\Delete\DeleteCourseByIdCommand;
+use App\Course\Application\FindAll\FindAllCourseQuery;
+use App\Course\Application\FindCourse\FindCourseByIdQuery;
+use App\Course\Application\ListCourseResponse;
 use App\Shared\Domain\Bus\Command\CommandBus;
 use App\Shared\Domain\Bus\Query\QueryBus;
-use App\Student\Application\Create\CreateStudentCommand;
-use App\Student\Application\Delete\DeleteStudentByIdCommand;
-use App\Student\Application\FindAll\FindAllStudentQuery;
-use App\Student\Application\FindStudent\FindStudentByIdQuery;
-use App\Student\Application\ListStudentResponse;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
@@ -18,9 +18,9 @@ use Symfony\Component\HttpFoundation\Request;
 
 /**
  *
- * @Route("/students")
+ * @Route("/courses")
  */
-class StudentController extends AbstractController
+class CoursesController extends AbstractController
 {
 
     private $commandBus;
@@ -34,13 +34,13 @@ class StudentController extends AbstractController
 
 
     /**
-     * @Route("/{studentId}", methods={"GET"})
+     * @Route("/{courseId}", methods={"GET"})
      */
-    public function getById(string $studentId)
+    public function getById(string $courseId)
     {
         try {
             return $this->json(
-                $this->queryBus->ask(new FindStudentByIdQuery($studentId))
+                $this->queryBus->ask(new FindCourseByIdQuery($courseId))
             );
         } catch (NotFoundHttpException $exception) {
             return $this->json([
@@ -54,19 +54,19 @@ class StudentController extends AbstractController
      */
     public function getAll()
     {
-        /** @var ListStudentResponse $response */
-        $response = $this->queryBus->ask(new FindAllStudentQuery());
-        return $this->json($response->students);
+        /** @var ListCourseResponse $response */
+        $response = $this->queryBus->ask(new FindAllCourseQuery());
+        return $this->json($response->courses);
     }
 
     /**
-     * @Route("/{studentId}", methods={"PUT"})
+     * @Route("/{courseId}", methods={"PUT"})
      */
-    public function create(string $studentId, Request $request)
+    public function create(string $courseId, Request $request)
     {
         $this->commandBus->dispatch(
-            new CreateStudentCommand(
-                $studentId,
+            new CreateCourseCommand(
+                $courseId,
                 $request->request->get('name', '')
             )
         );
@@ -76,13 +76,13 @@ class StudentController extends AbstractController
 
 
     /**
-     * @Route("/{studentId}", methods={"DELETE"})
+     * @Route("/{courseId}", methods={"DELETE"})
      */
-    public function deleteById(string $studentId)
+    public function deleteById(string $courseId)
     {
         $this->commandBus->dispatch(
-            new DeleteStudentByIdCommand(
-                $studentId
+            new DeleteCourseByIdCommand(
+                $courseId
             )
         );
         return new Response('', Response::HTTP_OK);

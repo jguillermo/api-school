@@ -1,4 +1,4 @@
-Feature: put student
+Feature: list all student
   As a user
   I want to create o update one student
 

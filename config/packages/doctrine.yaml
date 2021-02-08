@@ -10,9 +10,21 @@ doctrine:
         naming_strategy: doctrine.orm.naming_strategy.underscore_number_aware
         auto_mapping: true
         mappings:
-            App:
+            App\Student:
                 is_bundle: false
                 type: annotation
-                dir: '%kernel.project_dir%/src/Student/Infrastructure/Persistence'
+                dir: '%kernel.project_dir%/src/Enrollment/Infrastructure/Persistence'
                 prefix: 'App\Student\Infrastructure\Persistence'
-                alias: App
+                alias: Enrollment
+            App\Course:
+                is_bundle: false
+                type: annotation
+                dir: '%kernel.project_dir%/src/Course/Infrastructure/Persistence'
+                prefix: 'App\Course\Infrastructure\Persistence'
+                alias: Course
+            App\Enrollment:
+                is_bundle: false
+                type: annotation
+                dir: '%kernel.project_dir%/src/Enrollment/Infrastructure/Persistence'
+                prefix: 'App\Enrollment\Infrastructure\Persistence'
+                alias: Enrollment

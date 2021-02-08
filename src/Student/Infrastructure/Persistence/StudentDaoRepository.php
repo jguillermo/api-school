@@ -21,7 +21,7 @@ class StudentDaoRepository extends ServiceEntityRepository implements StudentRep
     }
 
     // /**
-    //  * @return StudentDao[] Returns an array of StudentDao objects
+    //  * @return EnrollmentDao[] Returns an array of EnrollmentDao objects
     //  */
     /*
     public function findByExampleField($value)
@@ -38,7 +38,7 @@ class StudentDaoRepository extends ServiceEntityRepository implements StudentRep
     */
 
     /*
-    public function findOneBySomeField($value): ?StudentDao
+    public function findOneBySomeField($value): ?EnrollmentDao
     {
         return $this->createQueryBuilder('s')
             ->andWhere('s.exampleField = :val')

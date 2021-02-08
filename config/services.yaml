@@ -13,6 +13,8 @@ services:
 
     # Configure
     _instanceof:
+        App\Shared\Domain\Bus\Event\DomainEventSubscriber:
+            tags: [ 'school.domain_event_subscriber' ]
         App\Shared\Domain\Bus\Command\CommandHandler:
             tags: [ 'school.command_handler' ]
 
@@ -45,3 +47,8 @@ services:
 
     App\Shared\Infrastructure\Bus\Query\InMemorySymfonyQueryBus:
         arguments: [!tagged school.query_handler]
+
+    # Events
+    App\Shared\Infrastructure\Bus\Event\InMemory\InMemorySymfonyEventBus:
+        arguments: [!tagged school.domain_event_subscriber]
+        lazy: true

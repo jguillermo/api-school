@@ -8,6 +8,14 @@ default:
             paths: [ tests/app/features/student ]
             contexts:
                 - App\Tests\Shared\Infrastructure\Behat\ApiContext
+        course:
+            paths: [ tests/app/features/course ]
+            contexts:
+                - App\Tests\Shared\Infrastructure\Behat\ApiContext
+        enrollment:
+            paths: [ tests/app/features/enrollment ]
+            contexts:
+                - App\Tests\Shared\Infrastructure\Behat\ApiContext
 
     extensions:
         FriendsOfBehat\SymfonyExtension:

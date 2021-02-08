@@ -1,17 +1,17 @@
 <?php
 
-namespace App\Student\Infrastructure\Persistence;
+namespace App\Course\Infrastructure\Persistence;
 
-use App\Student\Infrastructure\Persistence\StudentDaoRepository;
-use App\Student\Domain\Student;
+use App\Course\Infrastructure\Persistence\CourseDaoRepository;
+use App\Course\Domain\Course;
 use DateTime;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity(repositoryClass=StudentDaoRepository::class)
- * @ORM\Table(name="student")
+ * @ORM\Entity(repositoryClass=CourseDaoRepository::class)
+ * @ORM\Table(name="course")
  */
-class StudentDao
+class CourseDao
 {
     /**
      * @ORM\Id
@@ -30,9 +30,9 @@ class StudentDao
     private $updated;
 
 
-    public function __construct(Student $student)
+    public function __construct(Course $Course)
     {
-        $this->setEntity($student);
+        $this->setEntity($Course);
     }
 
 
@@ -86,15 +86,15 @@ class StudentDao
 
 
 
-    public function toEntity():Student
+    public function toEntity():Course
     {
-        return new Student($this->id,$this->name);
+        return new Course($this->id,$this->name);
     }
 
-    public function setEntity(Student $student)
+    public function setEntity(Course $Course)
     {
-        $this->id = $student->id();
-        $this->name = $student->name();
+        $this->id = $Course->id();
+        $this->name = $Course->name();
         $this->updated = new DateTime();
     }
 }
