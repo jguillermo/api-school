@@ -2,6 +2,8 @@
 
 namespace App\Tests\Student\Application;
 
+use App\Student\Application\Create\CreateStudentCommand;
+use App\Student\Application\Create\CreateStudentCommandHandler;
 use App\Student\Application\CreateStudent;
 use App\Student\Domain\Student;
 use App\Student\Domain\StudentRepository;
@@ -20,7 +22,7 @@ class CreateStudentTest extends UnitTestCase
         $mockRepository->shouldReceive('findById')->andReturn(Student::create($studentId,"name"));
         $mockRepository->shouldReceive('persist')->andReturn(null);
 
-        $service = new CreateStudent($mockRepository);
-        $service->execute($studentId,'name');
+        $service = new CreateStudentCommandHandler($mockRepository);
+        $service(new CreateStudentCommand($studentId,'name'));
     }
 }

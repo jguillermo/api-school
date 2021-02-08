@@ -3,7 +3,8 @@
 namespace App\Controller;
 
 
-use App\Student\Application\CreateStudent;
+use App\Shared\Domain\Bus\Command\CommandBus;
+use App\Student\Application\Create\CreateStudentCommand;
 use App\Student\Application\DeleteStudentById;
 use App\Student\Application\FindAllStudent;
 use App\Student\Application\FindStudentById;
@@ -20,19 +21,20 @@ use Symfony\Component\HttpFoundation\Request;
 class StudentController extends AbstractController
 {
     private $findStudentById;
-    private $creatorStudent;
     private $deleteStudentById;
     private $findAllStudent;
 
+    private $commandBus;
+
     public function __construct(FindStudentById $findStudentById,
-                                CreateStudent $creatorStudent,
                                 DeleteStudentById $deleteStudentById,
-                                FindAllStudent $findAllStudent)
+                                FindAllStudent $findAllStudent,
+                                CommandBus $commandBus)
     {
         $this->findStudentById = $findStudentById;
-        $this->creatorStudent = $creatorStudent;
         $this->deleteStudentById = $deleteStudentById;
         $this->findAllStudent = $findAllStudent;
+        $this->commandBus = $commandBus;
     }
 
 
@@ -68,9 +70,11 @@ class StudentController extends AbstractController
      */
     public function create(string $studentId, Request $request)
     {
-        $this->creatorStudent->execute(
-            $studentId,
-            $request->request->get('name', '')
+        $this->commandBus->dispatch(
+            new CreateStudentCommand(
+                $studentId,
+                $request->request->get('name', '')
+            )
         );
         return new Response('', Response::HTTP_CREATED);
 
