@@ -4,9 +4,10 @@
 namespace App\Student\Application;
 
 
+use App\Shared\Domain\Bus\Query\Response;
 use App\Student\Domain\Student;
 
-class StudentResponse
+class StudentResponse implements Response
 {
     public $id;
     public $name;

@@ -43,5 +43,5 @@ services:
     App\Shared\Infrastructure\Bus\Command\InMemorySymfonyCommandBus:
         arguments: [!tagged school.command_handler]
 
-    CodelyTv\Shared\Infrastructure\Bus\Query\InMemorySymfonyQueryBus:
+    App\Shared\Infrastructure\Bus\Query\InMemorySymfonyQueryBus:
         arguments: [!tagged school.query_handler]

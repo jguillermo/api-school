@@ -1,12 +1,15 @@
 <?php
 
 
-namespace App\Student\Application;
+namespace App\Student\Application\FindAll;
 
 
+use App\Shared\Domain\Bus\Query\QueryHandler;
+use App\Student\Application\ListStudentResponse;
+use App\Student\Application\StudentResponse;
 use App\Student\Domain\StudentRepository;
 
-class FindAllStudent
+class FindAllStudentQueryHandler implements QueryHandler
 {
     private $repository;
 
@@ -15,13 +18,13 @@ class FindAllStudent
         $this->repository = $repository;
     }
 
-    public function execute()
+    public function __invoke(FindAllStudentQuery $query): ListStudentResponse
     {
         $students = $this->repository->findAll();
         $responses = [];
         foreach ($students as $student){
             $responses[]=new StudentResponse($student);
         }
-        return $responses;
+        return new ListStudentResponse($responses);
     }
 }

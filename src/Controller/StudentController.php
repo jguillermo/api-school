@@ -4,10 +4,15 @@ namespace App\Controller;
 
 
 use App\Shared\Domain\Bus\Command\CommandBus;
+use App\Shared\Domain\Bus\Query\QueryBus;
 use App\Student\Application\Create\CreateStudentCommand;
-use App\Student\Application\DeleteStudentById;
+use App\Student\Application\Delete\DeleteStudentByIdCommand;
+use App\Student\Application\DeleteStudentByIdCommandHandler;
+use App\Student\Application\FindAll\FindAllStudentQuery;
 use App\Student\Application\FindAllStudent;
+use App\Student\Application\FindStudent\FindStudentByIdQuery;
 use App\Student\Application\FindStudentById;
+use App\Student\Application\ListStudentResponse;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
@@ -20,21 +25,14 @@ use Symfony\Component\HttpFoundation\Request;
  */
 class StudentController extends AbstractController
 {
-    private $findStudentById;
-    private $deleteStudentById;
-    private $findAllStudent;
 
     private $commandBus;
+    private $queryBus;
 
-    public function __construct(FindStudentById $findStudentById,
-                                DeleteStudentById $deleteStudentById,
-                                FindAllStudent $findAllStudent,
-                                CommandBus $commandBus)
+    public function __construct(CommandBus $commandBus, QueryBus $queryBus)
     {
-        $this->findStudentById = $findStudentById;
-        $this->deleteStudentById = $deleteStudentById;
-        $this->findAllStudent = $findAllStudent;
         $this->commandBus = $commandBus;
+        $this->queryBus = $queryBus;
     }
 
 
@@ -45,7 +43,7 @@ class StudentController extends AbstractController
     {
         try {
             return $this->json(
-                $this->findStudentById->execute($studentId)
+                $this->queryBus->ask(new FindStudentByIdQuery($studentId))
             );
         } catch (NotFoundHttpException $exception) {
             return $this->json([
@@ -59,10 +57,9 @@ class StudentController extends AbstractController
      */
     public function getAll()
     {
-        return $this->json(
-            $this->findAllStudent->execute()
-        );
-
+        /** @var ListStudentResponse $response */
+        $response = $this->queryBus->ask(new FindAllStudentQuery());
+        return $this->json($response->students);
     }
 
     /**
@@ -86,8 +83,11 @@ class StudentController extends AbstractController
      */
     public function deleteById(string $studentId)
     {
-
-        $this->deleteStudentById->execute($studentId);
+        $this->commandBus->dispatch(
+            new DeleteStudentByIdCommand(
+                $studentId
+            )
+        );
         return new Response('', Response::HTTP_OK);
 
     }

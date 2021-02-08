@@ -8,6 +8,7 @@ use App\Shared\Domain\Bus\Query\Query;
 use App\Shared\Domain\Bus\Query\QueryBus;
 use App\Shared\Domain\Bus\Query\Response;
 use App\Shared\Infrastructure\Bus\CallableFirstParameterExtractor;
+use Symfony\Component\Messenger\Exception\HandlerFailedException;
 use Symfony\Component\Messenger\Exception\NoHandlerForMessageException;
 use Symfony\Component\Messenger\Handler\HandlersLocator;
 use Symfony\Component\Messenger\MessageBus;
@@ -38,6 +39,10 @@ final class InMemorySymfonyQueryBus implements QueryBus
             return $stamp->getResult();
         } catch (NoHandlerForMessageException $unused) {
             throw new QueryNotRegisteredError($query);
+        } catch (HandlerFailedException $handlerFailedException) {
+            throw $handlerFailedException->getNestedExceptions()[0];
         }
+
+
     }
 }

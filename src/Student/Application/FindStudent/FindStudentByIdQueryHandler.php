@@ -1,15 +1,17 @@
 <?php
 
 
-namespace App\Student\Application;
+namespace App\Student\Application\FindStudent;
 
 
+use App\Shared\Domain\Bus\Query\QueryHandler;
+use App\Student\Application\StudentResponse;
 use App\Student\Domain\Student;
 use App\Student\Domain\StudentRepository;
 use Symfony\Component\HttpKernel\Exception\BadRequestHttpException;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
-class FindStudentById
+class FindStudentByIdQueryHandler implements QueryHandler
 {
     private $repository;
 
@@ -18,9 +20,9 @@ class FindStudentById
         $this->repository = $repository;
     }
 
-    public function execute(string $id)
+    public function __invoke(FindStudentByIdQuery $query): StudentResponse
     {
-        $student = $this->repository->findById($id);
+        $student = $this->repository->findById($query->id);
         if($student == null){
             throw new NotFoundHttpException("Student not found");
         }
