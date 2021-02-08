@@ -70,6 +70,9 @@
         "behatch/contexts": "^3.3",
         "friends-of-behat/mink-browserkit-driver": "^1.5",
         "friends-of-behat/symfony-extension": "^2.2",
+        "fzaninotto/faker": "^1.9",
+        "mockery/mockery": "^1.4",
+        "phpunit/phpunit": "^9.5",
         "symfony/maker-bundle": "^1.28"
     }
 }

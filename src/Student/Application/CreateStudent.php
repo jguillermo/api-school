@@ -6,7 +6,6 @@ namespace App\Student\Application;
 
 use App\Student\Domain\Student;
 use App\Student\Domain\StudentRepository;
-use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 class CreateStudent
 {
