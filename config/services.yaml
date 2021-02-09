@@ -47,6 +47,7 @@ services:
 
     App\Shared\Infrastructure\Bus\Query\InMemorySymfonyQueryBus:
         arguments: [!tagged school.query_handler]
+        lazy: true
 
     # Events
     App\Shared\Infrastructure\Bus\Event\InMemory\InMemorySymfonyEventBus:
