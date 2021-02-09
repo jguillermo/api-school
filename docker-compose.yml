@@ -11,3 +11,22 @@ services:
       - MYSQL_ALLOW_EMPTY_PASSWORD=yes
       - MYSQL_DATABASE=school_db
     command: ["--default-authentication-plugin=mysql_native_password"]
+    volumes:
+      - ./container/data:/docker-entrypoint-initdb.d
+
+  php:
+    container_name: school-php
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    volumes:
+      - .:/app:delegated
+    env_file:
+      - .env
+    depends_on:
+      - mysql
+    command: symfony serve --port=8080 --no-tls
+
