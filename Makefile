@@ -26,7 +26,7 @@ down:
 	docker-compose down
 
 composer-install:
-	docker run --rm --interactive --tty \
+	docker run --rm --interactive \
 	  --user $$(id -u):$$(id -g) \
       --volume $(PWD):/app \
       composer install
