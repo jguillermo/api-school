@@ -1,12 +1,12 @@
 <?php
 
 
-namespace App\Student\Application\Create;
+namespace School\Student\Application\Create;
 
 
-use App\Shared\Domain\Bus\Command\CommandHandler;
-use App\Student\Domain\Student;
-use App\Student\Domain\StudentRepository;
+use School\Shared\Domain\Bus\Command\CommandHandler;
+use School\Student\Domain\Student;
+use School\Student\Domain\StudentRepository;
 
 class CreateStudentCommandHandler implements CommandHandler
 {

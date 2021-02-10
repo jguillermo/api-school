@@ -2,13 +2,13 @@
 
 declare(strict_types = 1);
 
-namespace App\Tests\Shared\Infrastructure\Behat;
+namespace School\Tests\Shared\Infrastructure\Behat;
 
 use Behat\Gherkin\Node\PyStringNode;
 use Behat\Mink\Session;
 use Behat\MinkExtension\Context\RawMinkContext;
-use App\Tests\Shared\Infrastructure\Mink\MinkHelper;
-use App\Tests\Shared\Infrastructure\Mink\MinkSessionRequestHelper;
+use School\Tests\Shared\Infrastructure\Mink\MinkHelper;
+use School\Tests\Shared\Infrastructure\Mink\MinkSessionRequestHelper;
 use RuntimeException;
 
 final class ApiContext extends RawMinkContext

@@ -1,10 +1,10 @@
 <?php
 
 
-namespace App\Grade\Application\FindAllCourse;
+namespace School\Grade\Application\FindAllCourse;
 
 
-use App\Shared\Domain\Bus\Query\Query;
+use School\Shared\Domain\Bus\Query\Query;
 
 class FindAllCourseQuery implements Query
 {

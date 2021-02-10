@@ -1,15 +1,15 @@
 <?php
 
 
-namespace App\Exam\Application\Create;
+namespace School\Exam\Application\Create;
 
 
-use App\Course\Application\FindCourse\FindCourseByIdQuery;
-use App\Shared\Domain\Bus\Command\CommandHandler;
-use App\Exam\Domain\Exam;
-use App\Exam\Domain\ExamRepository;
-use App\Shared\Domain\Bus\Event\EventBus;
-use App\Shared\Domain\Bus\Query\QueryBus;
+use School\Course\Application\FindCourse\FindCourseByIdQuery;
+use School\Shared\Domain\Bus\Command\CommandHandler;
+use School\Exam\Domain\Exam;
+use School\Exam\Domain\ExamRepository;
+use School\Shared\Domain\Bus\Event\EventBus;
+use School\Shared\Domain\Bus\Query\QueryBus;
 
 class CreateExamCommandHandler implements CommandHandler
 {

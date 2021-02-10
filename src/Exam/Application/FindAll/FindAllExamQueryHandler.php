@@ -1,15 +1,15 @@
 <?php
 
 
-namespace App\Exam\Application\FindAll;
+namespace School\Exam\Application\FindAll;
 
 
-use App\Course\Application\FindCourse\FindCourseByIdQuery;
-use App\Shared\Domain\Bus\Query\QueryBus;
-use App\Shared\Domain\Bus\Query\QueryHandler;
-use App\Exam\Application\ListExamResponse;
-use App\Exam\Application\ExamResponse;
-use App\Exam\Domain\ExamRepository;
+use School\Course\Application\FindCourse\FindCourseByIdQuery;
+use School\Shared\Domain\Bus\Query\QueryBus;
+use School\Shared\Domain\Bus\Query\QueryHandler;
+use School\Exam\Application\ListExamResponse;
+use School\Exam\Application\ExamResponse;
+use School\Exam\Domain\ExamRepository;
 
 class FindAllExamQueryHandler implements QueryHandler
 {

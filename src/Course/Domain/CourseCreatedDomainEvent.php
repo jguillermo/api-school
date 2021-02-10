@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Course\Domain;
+namespace School\Course\Domain;
 
-use App\Shared\Domain\Bus\Event\DomainEvent;
+use School\Shared\Domain\Bus\Event\DomainEvent;
 
 final class CourseCreatedDomainEvent extends DomainEvent
 {

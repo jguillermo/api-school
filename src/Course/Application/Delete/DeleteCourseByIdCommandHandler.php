@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Course\Application\Delete;
+namespace School\Course\Application\Delete;
 
 
-use App\Course\Domain\Course;
-use App\Shared\Domain\Bus\Command\CommandHandler;
-use App\Course\Domain\CourseRepository;
-use App\Shared\Domain\Bus\Event\EventBus;
+use School\Course\Domain\Course;
+use School\Shared\Domain\Bus\Command\CommandHandler;
+use School\Course\Domain\CourseRepository;
+use School\Shared\Domain\Bus\Event\EventBus;
 
 class DeleteCourseByIdCommandHandler implements CommandHandler
 {

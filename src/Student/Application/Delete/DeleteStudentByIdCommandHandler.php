@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Student\Application\Delete;
+namespace School\Student\Application\Delete;
 
 
-use App\Shared\Domain\Bus\Command\CommandHandler;
-use App\Student\Domain\StudentRepository;
+use School\Shared\Domain\Bus\Command\CommandHandler;
+use School\Student\Domain\StudentRepository;
 
 class DeleteStudentByIdCommandHandler implements CommandHandler
 {

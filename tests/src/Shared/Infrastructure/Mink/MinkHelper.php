@@ -2,7 +2,7 @@
 
 declare(strict_types = 1);
 
-namespace App\Tests\Shared\Infrastructure\Mink;
+namespace School\Tests\Shared\Infrastructure\Mink;
 
 use Behat\Mink\Driver\DriverInterface;
 use Behat\Mink\Session;

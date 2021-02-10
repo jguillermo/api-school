@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Exam\Domain;
+namespace School\Exam\Domain;
 
-use App\Shared\Domain\Bus\Event\DomainEvent;
+use School\Shared\Domain\Bus\Event\DomainEvent;
 
 final class ExamDeletedDomainEvent extends DomainEvent
 {

@@ -1,14 +1,14 @@
 <?php
 
 
-namespace App\Enrollment\Application\FindByCourse;
+namespace School\Enrollment\Application\FindByCourse;
 
 
-use App\Enrollment\Application\ListEnrollmentResponse;
-use App\Shared\Domain\Bus\Query\QueryHandler;
-use App\Enrollment\Application\EnrollmentResponse;
-use App\Enrollment\Domain\Enrollment;
-use App\Enrollment\Domain\EnrollmentRepository;
+use School\Enrollment\Application\ListEnrollmentResponse;
+use School\Shared\Domain\Bus\Query\QueryHandler;
+use School\Enrollment\Application\EnrollmentResponse;
+use School\Enrollment\Domain\Enrollment;
+use School\Enrollment\Domain\EnrollmentRepository;
 use Symfony\Component\HttpKernel\Exception\BadRequestHttpException;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 

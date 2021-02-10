@@ -1,13 +1,13 @@
 <?php
 
 
-namespace App\Course\Application\FindCourse;
+namespace School\Course\Application\FindCourse;
 
 
-use App\Shared\Domain\Bus\Query\QueryHandler;
-use App\Course\Application\CourseResponse;
-use App\Course\Domain\Course;
-use App\Course\Domain\CourseRepository;
+use School\Shared\Domain\Bus\Query\QueryHandler;
+use School\Course\Application\CourseResponse;
+use School\Course\Domain\Course;
+use School\Course\Domain\CourseRepository;
 use Symfony\Component\HttpKernel\Exception\BadRequestHttpException;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 

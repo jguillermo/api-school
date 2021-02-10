@@ -1,10 +1,10 @@
 <?php
 
 
-namespace App\Enrollment\Application\Create;
+namespace School\Enrollment\Application\Create;
 
 
-use App\Shared\Domain\Bus\Command\Command;
+use School\Shared\Domain\Bus\Command\Command;
 
 class CreateEnrollmentCommand implements Command
 {

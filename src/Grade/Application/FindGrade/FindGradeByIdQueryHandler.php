@@ -1,13 +1,13 @@
 <?php
 
 
-namespace App\Grade\Application\FindGrade;
+namespace School\Grade\Application\FindGrade;
 
 
-use App\Shared\Domain\Bus\Query\QueryHandler;
-use App\Grade\Application\GradeResponse;
-use App\Grade\Domain\Grade;
-use App\Grade\Domain\GradeRepository;
+use School\Shared\Domain\Bus\Query\QueryHandler;
+use School\Grade\Application\GradeResponse;
+use School\Grade\Domain\Grade;
+use School\Grade\Domain\GradeRepository;
 use Symfony\Component\HttpKernel\Exception\BadRequestHttpException;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 

@@ -4,14 +4,14 @@
 namespace App\Event;
 
 
-use App\Course\Domain\CourseCreatedDomainEvent;
-use App\Enrollment\Application\Create\CreateEnrollmentCommand;
-use App\Shared\Domain\Bus\Command\CommandBus;
-use App\Shared\Domain\Bus\Event\DomainEventSubscriber;
-use App\Shared\Domain\Bus\Query\QueryBus;
-use App\Student\Application\FindAll\FindAllStudentQuery;
-use App\Student\Application\ListStudentResponse;
-use App\Student\Application\StudentResponse;
+use School\Course\Domain\CourseCreatedDomainEvent;
+use School\Enrollment\Application\Create\CreateEnrollmentCommand;
+use School\Shared\Domain\Bus\Command\CommandBus;
+use School\Shared\Domain\Bus\Event\DomainEventSubscriber;
+use School\Shared\Domain\Bus\Query\QueryBus;
+use School\Student\Application\FindAll\FindAllStudentQuery;
+use School\Student\Application\ListStudentResponse;
+use School\Student\Application\StudentResponse;
 
 class EnrollmentStudentOnCourseCreated implements DomainEventSubscriber
 {

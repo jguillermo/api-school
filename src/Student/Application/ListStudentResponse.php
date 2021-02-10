@@ -1,11 +1,11 @@
 <?php
 
 
-namespace App\Student\Application;
+namespace School\Student\Application;
 
 
-use App\Shared\Domain\Bus\Query\Response;
-use App\Student\Domain\Student;
+use School\Shared\Domain\Bus\Query\Response;
+use School\Student\Domain\Student;
 
 class ListStudentResponse implements Response
 {

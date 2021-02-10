@@ -1,12 +1,12 @@
 <?php
 
 
-namespace App\Course\Application\Create;
+namespace School\Course\Application\Create;
 
 
-use App\Shared\Domain\Bus\Command\Command;
-use App\Course\Domain\Course;
-use App\Course\Domain\CourseRepository;
+use School\Shared\Domain\Bus\Command\Command;
+use School\Course\Domain\Course;
+use School\Course\Domain\CourseRepository;
 
 class CreateCourseCommand implements Command
 {

@@ -3,27 +3,27 @@ default:
         health_check:
             paths: [ tests/app/features/health_check ]
             contexts:
-                - App\Tests\Shared\Infrastructure\Behat\ApiContext
+                - School\Tests\Shared\Infrastructure\Behat\ApiContext
         student:
             paths: [ tests/app/features/student ]
             contexts:
-                - App\Tests\Shared\Infrastructure\Behat\ApiContext
+                - School\Tests\Shared\Infrastructure\Behat\ApiContext
         course:
             paths: [ tests/app/features/course ]
             contexts:
-                - App\Tests\Shared\Infrastructure\Behat\ApiContext
+                - School\Tests\Shared\Infrastructure\Behat\ApiContext
         enrollment:
             paths: [ tests/app/features/enrollment ]
             contexts:
-                - App\Tests\Shared\Infrastructure\Behat\ApiContext
+                - School\Tests\Shared\Infrastructure\Behat\ApiContext
         exam:
             paths: [ tests/app/features/course_exam ]
             contexts:
-                - App\Tests\Shared\Infrastructure\Behat\ApiContext
+                - School\Tests\Shared\Infrastructure\Behat\ApiContext
         grade:
             paths: [ tests/app/features/grade ]
             contexts:
-                - App\Tests\Shared\Infrastructure\Behat\ApiContext
+                - School\Tests\Shared\Infrastructure\Behat\ApiContext
 
     extensions:
         FriendsOfBehat\SymfonyExtension:

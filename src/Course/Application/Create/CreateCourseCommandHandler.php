@@ -1,13 +1,13 @@
 <?php
 
 
-namespace App\Course\Application\Create;
+namespace School\Course\Application\Create;
 
 
-use App\Shared\Domain\Bus\Command\CommandHandler;
-use App\Course\Domain\Course;
-use App\Course\Domain\CourseRepository;
-use App\Shared\Domain\Bus\Event\EventBus;
+use School\Shared\Domain\Bus\Command\CommandHandler;
+use School\Course\Domain\Course;
+use School\Course\Domain\CourseRepository;
+use School\Shared\Domain\Bus\Event\EventBus;
 
 class CreateCourseCommandHandler implements CommandHandler
 {

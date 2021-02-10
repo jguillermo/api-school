@@ -1,11 +1,11 @@
 <?php
 
 
-namespace App\Grade\Application\FindAllExam;
+namespace School\Grade\Application\FindAllExam;
 
 
-use App\Shared\Domain\Bus\Query\Response;
-use App\Grade\Domain\Grade;
+use School\Shared\Domain\Bus\Query\Response;
+use School\Grade\Domain\Grade;
 
 class ListGradeExamResponse implements Response
 {

@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Exam\Infrastructure\Persistence;
+namespace School\Exam\Infrastructure\Persistence;
 
-use App\Exam\Domain\Exam;
-use App\Exam\Domain\ExamRepository;
-use App\Exam\Infrastructure\Persistence\ExamDao;
+use School\Exam\Domain\Exam;
+use School\Exam\Domain\ExamRepository;
+use School\Exam\Infrastructure\Persistence\ExamDao;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 

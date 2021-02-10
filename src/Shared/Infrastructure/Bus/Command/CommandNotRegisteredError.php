@@ -2,9 +2,9 @@
 
 declare(strict_types = 1);
 
-namespace App\Shared\Infrastructure\Bus\Command;
+namespace School\Shared\Infrastructure\Bus\Command;
 
-use App\Shared\Domain\Bus\Command\Command;
+use School\Shared\Domain\Bus\Command\Command;
 use RuntimeException;
 
 final class CommandNotRegisteredError extends RuntimeException

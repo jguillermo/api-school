@@ -2,9 +2,9 @@
 
 declare(strict_types = 1);
 
-namespace App\Shared\Infrastructure\Bus\Event;
+namespace School\Shared\Infrastructure\Bus\Event;
 
-use App\Shared\Domain\Bus\Event\DomainEvent;
+use School\Shared\Domain\Bus\Event\DomainEvent;
 
 final class DomainEventJsonSerializer
 {

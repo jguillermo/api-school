@@ -1,7 +1,7 @@
 <?php
 
 
-namespace App\Student\Domain;
+namespace School\Student\Domain;
 
 
 class Student

@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Student\Infrastructure\Persistence;
+namespace School\Student\Infrastructure\Persistence;
 
-use App\Student\Infrastructure\Persistence\StudentDaoRepository;
-use App\Student\Domain\Student;
+use School\Student\Infrastructure\Persistence\StudentDaoRepository;
+use School\Student\Domain\Student;
 use DateTime;
 use Doctrine\ORM\Mapping as ORM;
 

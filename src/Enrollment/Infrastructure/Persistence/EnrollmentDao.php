@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Enrollment\Infrastructure\Persistence;
+namespace School\Enrollment\Infrastructure\Persistence;
 
-use App\Enrollment\Infrastructure\Persistence\EnrollmentDaoRepository;
-use App\Enrollment\Domain\Enrollment;
+use School\Enrollment\Infrastructure\Persistence\EnrollmentDaoRepository;
+use School\Enrollment\Domain\Enrollment;
 use DateTime;
 use Doctrine\ORM\Mapping as ORM;
 

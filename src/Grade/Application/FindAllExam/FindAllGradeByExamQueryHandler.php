@@ -1,14 +1,14 @@
 <?php
 
 
-namespace App\Grade\Application\FindAllExam;
+namespace School\Grade\Application\FindAllExam;
 
 
-use App\Grade\Domain\Exam;
-use App\Shared\Domain\Bus\Query\QueryHandler;
-use App\Grade\Application\ListGradeResponse;
-use App\Grade\Application\GradeResponse;
-use App\Grade\Domain\GradeRepository;
+use School\Grade\Domain\Exam;
+use School\Shared\Domain\Bus\Query\QueryHandler;
+use School\Grade\Application\ListGradeResponse;
+use School\Grade\Application\GradeResponse;
+use School\Grade\Domain\GradeRepository;
 
 class FindAllGradeByExamQueryHandler implements QueryHandler
 {

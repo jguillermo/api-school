@@ -1,10 +1,10 @@
 <?php
 
 
-namespace App\Exam\Domain;
+namespace School\Exam\Domain;
 
 
-use App\Shared\Domain\Aggregate\AggregateRoot;
+use School\Shared\Domain\Aggregate\AggregateRoot;
 
 class Exam extends AggregateRoot
 {

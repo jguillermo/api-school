@@ -10,33 +10,33 @@ doctrine:
         naming_strategy: doctrine.orm.naming_strategy.underscore_number_aware
         auto_mapping: true
         mappings:
-            App\Student:
+            School\Student:
                 is_bundle: false
                 type: annotation
                 dir: '%kernel.project_dir%/src/Enrollment/Infrastructure/Persistence'
-                prefix: 'App\Student\Infrastructure\Persistence'
+                prefix: 'School\Student\Infrastructure\Persistence'
                 alias: Enrollment
-            App\Course:
+            School\Course:
                 is_bundle: false
                 type: annotation
                 dir: '%kernel.project_dir%/src/Course/Infrastructure/Persistence'
-                prefix: 'App\Course\Infrastructure\Persistence'
+                prefix: 'School\Course\Infrastructure\Persistence'
                 alias: Course
-            App\Enrollment:
+            School\Enrollment:
                 is_bundle: false
                 type: annotation
                 dir: '%kernel.project_dir%/src/Enrollment/Infrastructure/Persistence'
-                prefix: 'App\Enrollment\Infrastructure\Persistence'
+                prefix: 'School\Enrollment\Infrastructure\Persistence'
                 alias: Enrollment
-            App\Exam:
+            School\Exam:
                 is_bundle: false
                 type: annotation
                 dir: '%kernel.project_dir%/src/Exam/Infrastructure/Persistence'
-                prefix: 'App\Exam\Infrastructure\Persistence'
+                prefix: 'School\Exam\Infrastructure\Persistence'
                 alias: Exam
-            App\Grade:
+            School\Grade:
                 is_bundle: false
                 type: annotation
                 dir: '%kernel.project_dir%/src/Grade/Infrastructure/Persistence'
-                prefix: 'App\Grade\Infrastructure\Persistence'
+                prefix: 'School\Grade\Infrastructure\Persistence'
                 alias: Grade

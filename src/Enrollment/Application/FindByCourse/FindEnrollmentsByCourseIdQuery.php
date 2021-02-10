@@ -1,9 +1,9 @@
 <?php
 
 
-namespace App\Enrollment\Application\FindByCourse;
+namespace School\Enrollment\Application\FindByCourse;
 
-use App\Shared\Domain\Bus\Query\Query;
+use School\Shared\Domain\Bus\Query\Query;
 
 class FindEnrollmentsByCourseIdQuery implements Query
 {

@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Grade\Application\Delete;
+namespace School\Grade\Application\Delete;
 
 
-use App\Shared\Domain\Bus\Command\CommandHandler;
-use App\Grade\Domain\GradeRepository;
+use School\Shared\Domain\Bus\Command\CommandHandler;
+use School\Grade\Domain\GradeRepository;
 
 class DeleteGradeByIdCommandHandler implements CommandHandler
 {

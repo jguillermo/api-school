@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Tests\Student\Application;
+namespace School\Tests\Student\Application;
 
-use App\Student\Application\Create\CreateStudentCommand;
-use App\Student\Application\Create\CreateStudentCommandHandler;
-use App\Student\Application\CreateStudent;
-use App\Student\Domain\Student;
-use App\Student\Domain\StudentRepository;
-use App\Tests\Shared\Infrastructure\PhpUnit\UnitTestCase;
+use School\Student\Application\Create\CreateStudentCommand;
+use School\Student\Application\Create\CreateStudentCommandHandler;
+use School\Student\Application\CreateStudent;
+use School\Student\Domain\Student;
+use School\Student\Domain\StudentRepository;
+use School\Tests\Shared\Infrastructure\PhpUnit\UnitTestCase;
 
 class CreateStudentTest extends UnitTestCase
 {

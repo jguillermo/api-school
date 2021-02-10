@@ -2,11 +2,11 @@
 
 declare(strict_types = 1);
 
-namespace App\Shared\Infrastructure\Bus\Event;
+namespace School\Shared\Infrastructure\Bus\Event;
 
-use App\Shared\Domain\Bus\Event\DomainEventSubscriber;
-use App\Shared\Infrastructure\Bus\CallableFirstParameterExtractor;
-use App\Shared\Infrastructure\Bus\Event\RabbitMq\RabbitMqQueueNameFormatter;
+use School\Shared\Domain\Bus\Event\DomainEventSubscriber;
+use School\Shared\Infrastructure\Bus\CallableFirstParameterExtractor;
+use School\Shared\Infrastructure\Bus\Event\RabbitMq\RabbitMqQueueNameFormatter;
 use RuntimeException;
 use Traversable;
 use function Lambdish\Phunctional\search;

@@ -4,14 +4,14 @@
 namespace App\Event;
 
 
-use App\Exam\Domain\ExamDeletedDomainEvent;
-use App\Grade\Application\Delete\DeleteGradeByIdCommand;
-use App\Grade\Application\FindAllExam\FindAllGradeByExamQuery;
-use App\Grade\Application\FindAllExam\ListGradeExamResponse;
-use App\Grade\Application\ListGradeResponse;
-use App\Shared\Domain\Bus\Command\CommandBus;
-use App\Shared\Domain\Bus\Event\DomainEventSubscriber;
-use App\Shared\Domain\Bus\Query\QueryBus;
+use School\Exam\Domain\ExamDeletedDomainEvent;
+use School\Grade\Application\Delete\DeleteGradeByIdCommand;
+use School\Grade\Application\FindAllExam\FindAllGradeByExamQuery;
+use School\Grade\Application\FindAllExam\ListGradeExamResponse;
+use School\Grade\Application\ListGradeResponse;
+use School\Shared\Domain\Bus\Command\CommandBus;
+use School\Shared\Domain\Bus\Event\DomainEventSubscriber;
+use School\Shared\Domain\Bus\Query\QueryBus;
 
 
 class DeleteGradeOnExamDeleted implements DomainEventSubscriber

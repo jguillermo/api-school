@@ -1,13 +1,13 @@
 <?php
 
 
-namespace App\Grade\Application\Create;
+namespace School\Grade\Application\Create;
 
 
-use App\Grade\Domain\Exam;
-use App\Shared\Domain\Bus\Command\CommandHandler;
-use App\Grade\Domain\Grade;
-use App\Grade\Domain\GradeRepository;
+use School\Grade\Domain\Exam;
+use School\Shared\Domain\Bus\Command\CommandHandler;
+use School\Grade\Domain\Grade;
+use School\Grade\Domain\GradeRepository;
 
 class CreateGradeCommandHandler implements CommandHandler
 {

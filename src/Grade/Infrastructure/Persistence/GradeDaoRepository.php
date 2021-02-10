@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Grade\Infrastructure\Persistence;
+namespace School\Grade\Infrastructure\Persistence;
 
-use App\Grade\Domain\Exam;
-use App\Grade\Domain\Grade;
-use App\Grade\Domain\GradeRepository;
-use App\Grade\Infrastructure\Persistence\GradeDao;
+use School\Grade\Domain\Exam;
+use School\Grade\Domain\Grade;
+use School\Grade\Domain\GradeRepository;
+use School\Grade\Infrastructure\Persistence\GradeDao;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 use MongoDB\BSON\Type;

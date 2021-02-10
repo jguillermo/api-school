@@ -1,11 +1,11 @@
 <?php
 
 
-namespace App\Enrollment\Application;
+namespace School\Enrollment\Application;
 
 
-use App\Shared\Domain\Bus\Query\Response;
-use App\Enrollment\Domain\Enrollment;
+use School\Shared\Domain\Bus\Query\Response;
+use School\Enrollment\Domain\Enrollment;
 
 class ListEnrollmentResponse implements Response
 {

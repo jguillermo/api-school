@@ -2,7 +2,7 @@
 
 declare(strict_types = 1);
 
-namespace App\Tests\Shared\Infrastructure\PhpUnit;
+namespace School\Tests\Shared\Infrastructure\PhpUnit;
 
 
 

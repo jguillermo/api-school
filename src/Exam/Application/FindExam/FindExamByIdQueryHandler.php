@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Exam\Application\FindExam;
+namespace School\Exam\Application\FindExam;
 
-use App\Course\Application\FindCourse\FindCourseByIdQuery;
-use App\Shared\Domain\Bus\Query\QueryBus;
-use App\Shared\Domain\Bus\Query\QueryHandler;
-use App\Exam\Application\ExamResponse;
-use App\Exam\Domain\ExamRepository;
+use School\Course\Application\FindCourse\FindCourseByIdQuery;
+use School\Shared\Domain\Bus\Query\QueryBus;
+use School\Shared\Domain\Bus\Query\QueryHandler;
+use School\Exam\Application\ExamResponse;
+use School\Exam\Domain\ExamRepository;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 class FindExamByIdQueryHandler implements QueryHandler

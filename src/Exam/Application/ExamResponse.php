@@ -1,11 +1,11 @@
 <?php
 
 
-namespace App\Exam\Application;
+namespace School\Exam\Application;
 
 
-use App\Shared\Domain\Bus\Query\Response;
-use App\Exam\Domain\Exam;
+use School\Shared\Domain\Bus\Query\Response;
+use School\Exam\Domain\Exam;
 
 class ExamResponse implements Response
 {

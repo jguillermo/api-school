@@ -1,11 +1,11 @@
 <?php
 
 
-namespace App\Enrollment\Application\DeleteByCourseId;
+namespace School\Enrollment\Application\DeleteByCourseId;
 
-use App\Shared\Domain\Bus\Command\CommandHandler;
-use App\Enrollment\Domain\Enrollment;
-use App\Enrollment\Domain\EnrollmentRepository;
+use School\Shared\Domain\Bus\Command\CommandHandler;
+use School\Enrollment\Domain\Enrollment;
+use School\Enrollment\Domain\EnrollmentRepository;
 
 class DeleteEnrollmentByCourseIdCommandHandler implements CommandHandler
 {

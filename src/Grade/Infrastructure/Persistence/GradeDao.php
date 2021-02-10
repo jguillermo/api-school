@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Grade\Infrastructure\Persistence;
+namespace School\Grade\Infrastructure\Persistence;
 
-use App\Grade\Domain\Exam;
-use App\Grade\Infrastructure\Persistence\GradeDaoRepository;
-use App\Grade\Domain\Grade;
+use School\Grade\Domain\Exam;
+use School\Grade\Infrastructure\Persistence\GradeDaoRepository;
+use School\Grade\Domain\Grade;
 use DateTime;
 use Doctrine\ORM\Mapping as ORM;
 

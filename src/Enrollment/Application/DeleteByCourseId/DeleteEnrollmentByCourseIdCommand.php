@@ -1,9 +1,9 @@
 <?php
 
 
-namespace App\Enrollment\Application\DeleteByCourseId;
+namespace School\Enrollment\Application\DeleteByCourseId;
 
-use App\Shared\Domain\Bus\Command\Command;
+use School\Shared\Domain\Bus\Command\Command;
 
 class DeleteEnrollmentByCourseIdCommand implements Command
 {

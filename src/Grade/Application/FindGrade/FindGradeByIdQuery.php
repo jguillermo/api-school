@@ -1,9 +1,9 @@
 <?php
 
 
-namespace App\Grade\Application\FindGrade;
+namespace School\Grade\Application\FindGrade;
 
-use App\Shared\Domain\Bus\Query\Query;
+use School\Shared\Domain\Bus\Query\Query;
 
 class FindGradeByIdQuery implements Query
 {

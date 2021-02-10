@@ -3,11 +3,11 @@
 namespace App\Controller;
 
 
-use App\Enrollment\Application\FindStudent\FindEnrollmentsByStudentIdQuery;
-use App\Enrollment\Application\ListEnrollmentResponse;
-use App\Shared\Domain\Bus\Command\CommandBus;
-use App\Shared\Domain\Bus\Query\QueryBus;
-use App\Student\Application\FindAll\FindAllStudentQuery;
+use School\Enrollment\Application\FindStudent\FindEnrollmentsByStudentIdQuery;
+use School\Enrollment\Application\ListEnrollmentResponse;
+use School\Shared\Domain\Bus\Command\CommandBus;
+use School\Shared\Domain\Bus\Query\QueryBus;
+use School\Student\Application\FindAll\FindAllStudentQuery;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 

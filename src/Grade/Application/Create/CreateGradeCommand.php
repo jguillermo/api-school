@@ -1,12 +1,12 @@
 <?php
 
 
-namespace App\Grade\Application\Create;
+namespace School\Grade\Application\Create;
 
 
-use App\Shared\Domain\Bus\Command\Command;
-use App\Grade\Domain\Grade;
-use App\Grade\Domain\GradeRepository;
+use School\Shared\Domain\Bus\Command\Command;
+use School\Grade\Domain\Grade;
+use School\Grade\Domain\GradeRepository;
 
 class CreateGradeCommand implements Command
 {

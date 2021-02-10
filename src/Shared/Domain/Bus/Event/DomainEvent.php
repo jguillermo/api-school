@@ -2,10 +2,10 @@
 
 declare(strict_types = 1);
 
-namespace App\Shared\Domain\Bus\Event;
+namespace School\Shared\Domain\Bus\Event;
 
-use App\Shared\Domain\Utils;
-use App\Shared\Domain\ValueObject\Uuid;
+use School\Shared\Domain\Utils;
+use School\Shared\Domain\ValueObject\Uuid;
 use DateTimeImmutable;
 
 abstract class DomainEvent

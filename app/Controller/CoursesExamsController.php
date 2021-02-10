@@ -3,14 +3,14 @@
 namespace App\Controller;
 
 
-use App\Course\Application\FindCourse\FindCourseByIdQuery;
-use App\Exam\Application\Create\CreateExamCommand;
-use App\Exam\Application\Delete\DeleteExamByIdCommand;
-use App\Exam\Application\FindAll\FindAllExamQuery;
-use App\Exam\Application\FindExam\FindExamByIdQuery;
-use App\Exam\Application\ListExamResponse;
-use App\Shared\Domain\Bus\Command\CommandBus;
-use App\Shared\Domain\Bus\Query\QueryBus;
+use School\Course\Application\FindCourse\FindCourseByIdQuery;
+use School\Exam\Application\Create\CreateExamCommand;
+use School\Exam\Application\Delete\DeleteExamByIdCommand;
+use School\Exam\Application\FindAll\FindAllExamQuery;
+use School\Exam\Application\FindExam\FindExamByIdQuery;
+use School\Exam\Application\ListExamResponse;
+use School\Shared\Domain\Bus\Command\CommandBus;
+use School\Shared\Domain\Bus\Query\QueryBus;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;

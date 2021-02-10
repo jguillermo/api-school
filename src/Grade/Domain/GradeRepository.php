@@ -1,7 +1,7 @@
 <?php
 
 
-namespace App\Grade\Domain;
+namespace School\Grade\Domain;
 
 
 interface GradeRepository

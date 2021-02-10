@@ -1,13 +1,13 @@
 <?php
 
 
-namespace App\Course\Application\FindAll;
+namespace School\Course\Application\FindAll;
 
 
-use App\Shared\Domain\Bus\Query\QueryHandler;
-use App\Course\Application\ListCourseResponse;
-use App\Course\Application\CourseResponse;
-use App\Course\Domain\CourseRepository;
+use School\Shared\Domain\Bus\Query\QueryHandler;
+use School\Course\Application\ListCourseResponse;
+use School\Course\Application\CourseResponse;
+use School\Course\Domain\CourseRepository;
 
 class FindAllCourseQueryHandler implements QueryHandler
 {

@@ -1,7 +1,7 @@
 <?php
 
 
-namespace App\Course\Domain;
+namespace School\Course\Domain;
 
 
 interface CourseRepository

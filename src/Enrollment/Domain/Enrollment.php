@@ -1,7 +1,7 @@
 <?php
 
 
-namespace App\Enrollment\Domain;
+namespace School\Enrollment\Domain;
 
 
 class Enrollment

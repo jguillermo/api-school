@@ -2,9 +2,9 @@
 
 declare(strict_types = 1);
 
-namespace App\Shared\Infrastructure\Bus\Query;
+namespace School\Shared\Infrastructure\Bus\Query;
 
-use App\Shared\Domain\Bus\Query\Query;
+use School\Shared\Domain\Bus\Query\Query;
 use RuntimeException;
 
 final class QueryNotRegisteredError extends RuntimeException

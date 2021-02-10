@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Exam\Application\Delete;
+namespace School\Exam\Application\Delete;
 
 
-use App\Shared\Domain\Bus\Command\Command;
+use School\Shared\Domain\Bus\Command\Command;
 
 class DeleteExamByIdCommand implements Command
 {

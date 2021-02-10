@@ -2,9 +2,9 @@
 
 declare(strict_types = 1);
 
-namespace App\Shared\Infrastructure\Bus;
+namespace School\Shared\Infrastructure\Bus;
 
-use App\Shared\Domain\Bus\Event\DomainEventSubscriber;
+use School\Shared\Domain\Bus\Event\DomainEventSubscriber;
 use ReflectionClass;
 use ReflectionMethod;
 use function Lambdish\Phunctional\map;

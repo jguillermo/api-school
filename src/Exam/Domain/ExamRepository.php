@@ -1,7 +1,7 @@
 <?php
 
 
-namespace App\Exam\Domain;
+namespace School\Exam\Domain;
 
 
 interface ExamRepository

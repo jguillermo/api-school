@@ -2,7 +2,7 @@
 
 declare(strict_types = 1);
 
-namespace App\Shared\Domain\Bus\Command;
+namespace School\Shared\Domain\Bus\Command;
 
 interface CommandHandler
 {

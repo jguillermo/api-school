@@ -4,15 +4,15 @@
 namespace App\Event;
 
 
-use App\Enrollment\Application\FindByCourse\FindEnrollmentsByCourseIdQuery;
-use App\Enrollment\Application\FindByCourse\ListEnrollmentStudentResponse;
-use App\Exam\Domain\ExamCreatedDomainEvent;
-use App\Grade\Application\Create\CreateGradeCommand;
-use App\Shared\Domain\Bus\Command\CommandBus;
-use App\Shared\Domain\Bus\Event\DomainEventSubscriber;
-use App\Shared\Domain\Bus\Query\QueryBus;
-use App\Shared\Domain\Utils;
-use App\Shared\Domain\ValueObject\Uuid;
+use School\Enrollment\Application\FindByCourse\FindEnrollmentsByCourseIdQuery;
+use School\Enrollment\Application\FindByCourse\ListEnrollmentStudentResponse;
+use School\Exam\Domain\ExamCreatedDomainEvent;
+use School\Grade\Application\Create\CreateGradeCommand;
+use School\Shared\Domain\Bus\Command\CommandBus;
+use School\Shared\Domain\Bus\Event\DomainEventSubscriber;
+use School\Shared\Domain\Bus\Query\QueryBus;
+use School\Shared\Domain\Utils;
+use School\Shared\Domain\ValueObject\Uuid;
 
 class CreateGradeOnExamCreated implements DomainEventSubscriber
 {

@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Enrollment\Infrastructure\Persistence;
+namespace School\Enrollment\Infrastructure\Persistence;
 
-use App\Course\Domain\Course;
-use App\Course\Infrastructure\Persistence\CourseDao;
-use App\Enrollment\Domain\Enrollment;
-use App\Enrollment\Domain\EnrollmentRepository;
-use App\Enrollment\Infrastructure\Persistence\EnrollmentDao;
+use School\Course\Domain\Course;
+use School\Course\Infrastructure\Persistence\CourseDao;
+use School\Enrollment\Domain\Enrollment;
+use School\Enrollment\Domain\EnrollmentRepository;
+use School\Enrollment\Infrastructure\Persistence\EnrollmentDao;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 

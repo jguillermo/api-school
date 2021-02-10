@@ -1,9 +1,9 @@
 <?php
 
 
-namespace App\Student\Application\FindStudent;
+namespace School\Student\Application\FindStudent;
 
-use App\Shared\Domain\Bus\Query\Query;
+use School\Shared\Domain\Bus\Query\Query;
 
 class FindStudentByIdQuery implements Query
 {

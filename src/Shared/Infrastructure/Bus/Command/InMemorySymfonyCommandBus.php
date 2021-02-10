@@ -2,11 +2,11 @@
 
 declare(strict_types = 1);
 
-namespace App\Shared\Infrastructure\Bus\Command;
+namespace School\Shared\Infrastructure\Bus\Command;
 
-use App\Shared\Domain\Bus\Command\Command;
-use App\Shared\Domain\Bus\Command\CommandBus;
-use App\Shared\Infrastructure\Bus\CallableFirstParameterExtractor;
+use School\Shared\Domain\Bus\Command\Command;
+use School\Shared\Domain\Bus\Command\CommandBus;
+use School\Shared\Infrastructure\Bus\CallableFirstParameterExtractor;
 use Symfony\Component\Messenger\Exception\HandlerFailedException;
 use Symfony\Component\Messenger\Exception\NoHandlerForMessageException;
 use Symfony\Component\Messenger\Handler\HandlersLocator;

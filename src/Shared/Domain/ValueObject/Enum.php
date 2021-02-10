@@ -2,9 +2,9 @@
 
 declare(strict_types = 1);
 
-namespace App\Shared\Domain\ValueObject;
+namespace School\Shared\Domain\ValueObject;
 
-use App\Shared\Domain\Utils;
+use School\Shared\Domain\Utils;
 use ReflectionClass;
 use function Lambdish\Phunctional\reindex;
 

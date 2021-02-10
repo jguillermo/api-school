@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Course\Infrastructure\Persistence;
+namespace School\Course\Infrastructure\Persistence;
 
-use App\Course\Domain\Course;
-use App\Course\Domain\CourseRepository;
-use App\Course\Infrastructure\Persistence\CourseDao;
+use School\Course\Domain\Course;
+use School\Course\Domain\CourseRepository;
+use School\Course\Infrastructure\Persistence\CourseDao;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 

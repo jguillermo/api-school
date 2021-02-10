@@ -1,12 +1,12 @@
 <?php
 namespace App\Event;
 
-use App\Course\Domain\CourseCreatedDomainEvent;
-use App\Course\Domain\CourseDeletedDomainEvent;
-use App\Enrollment\Application\DeleteByCourseId\DeleteEnrollmentByCourseIdCommand;
-use App\Shared\Domain\Bus\Command\CommandBus;
-use App\Shared\Domain\Bus\Event\DomainEventSubscriber;
-use App\Shared\Domain\Bus\Query\QueryBus;
+use School\Course\Domain\CourseCreatedDomainEvent;
+use School\Course\Domain\CourseDeletedDomainEvent;
+use School\Enrollment\Application\DeleteByCourseId\DeleteEnrollmentByCourseIdCommand;
+use School\Shared\Domain\Bus\Command\CommandBus;
+use School\Shared\Domain\Bus\Event\DomainEventSubscriber;
+use School\Shared\Domain\Bus\Query\QueryBus;
 
 class DeleteEnrollmentsOnCourseDeleted implements DomainEventSubscriber
 {

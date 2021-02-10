@@ -3,11 +3,11 @@
 namespace App\Controller;
 
 
-use App\Grade\Application\FindAllStudent\FindAllGradesByStudentQuery;
-use App\Grade\Application\ListGradeResponse;
-use App\Shared\Domain\Bus\Command\CommandBus;
-use App\Shared\Domain\Bus\Query\QueryBus;
-use App\Student\Application\ListStudentResponse;
+use School\Grade\Application\FindAllStudent\FindAllGradesByStudentQuery;
+use School\Grade\Application\ListGradeResponse;
+use School\Shared\Domain\Bus\Command\CommandBus;
+use School\Shared\Domain\Bus\Query\QueryBus;
+use School\Student\Application\ListStudentResponse;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 

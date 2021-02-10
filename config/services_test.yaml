@@ -6,5 +6,5 @@ services:
         autowire: true
         autoconfigure: true
 
-    App\Tests\:
+    School\Tests\:
         resource: '../tests/src/'

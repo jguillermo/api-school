@@ -1,9 +1,9 @@
 <?php
 
 
-namespace App\Exam\Application\FindExam;
+namespace School\Exam\Application\FindExam;
 
-use App\Shared\Domain\Bus\Query\Query;
+use School\Shared\Domain\Bus\Query\Query;
 
 class FindExamByIdQuery implements Query
 {

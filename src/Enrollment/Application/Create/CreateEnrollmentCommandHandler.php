@@ -1,12 +1,12 @@
 <?php
 
 
-namespace App\Enrollment\Application\Create;
+namespace School\Enrollment\Application\Create;
 
 
-use App\Shared\Domain\Bus\Command\CommandHandler;
-use App\Enrollment\Domain\Enrollment;
-use App\Enrollment\Domain\EnrollmentRepository;
+use School\Shared\Domain\Bus\Command\CommandHandler;
+use School\Enrollment\Domain\Enrollment;
+use School\Enrollment\Domain\EnrollmentRepository;
 
 class CreateEnrollmentCommandHandler implements CommandHandler
 {
