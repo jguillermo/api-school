@@ -50,7 +50,7 @@ class EnrollmentDao
 
     public function toEntity():Enrollment
     {
-        return new Enrollment($this->id,$this->name);
+        return new Enrollment($this->courseId,$this->studentId);
     }
 
 }

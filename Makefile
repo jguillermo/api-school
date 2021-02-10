@@ -30,3 +30,6 @@ composer-install:
 	  --user $$(id -u):$$(id -g) \
       --volume $(PWD):/app \
       composer install
+
+co:
+	echo $$(id -u):$$(id -g)

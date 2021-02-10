@@ -34,3 +34,9 @@ doctrine:
                 dir: '%kernel.project_dir%/src/Exam/Infrastructure/Persistence'
                 prefix: 'App\Exam\Infrastructure\Persistence'
                 alias: Exam
+            App\Grade:
+                is_bundle: false
+                type: annotation
+                dir: '%kernel.project_dir%/src/Grade/Infrastructure/Persistence'
+                prefix: 'App\Grade\Infrastructure\Persistence'
+                alias: Grade

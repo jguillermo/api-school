@@ -69,4 +69,13 @@ class EnrollmentDaoRepository extends ServiceEntityRepository implements Enrollm
         }
         $this->getEntityManager()->flush();
     }
+
+    public function findByCourse($courseId)
+    {
+        $list = [];
+        foreach ($this->findBy(['courseId' => $courseId]) as $dao) {
+            $list[] = $dao->toEntity();
+        }
+        return $list;
+    }
 }

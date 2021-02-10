@@ -3,6 +3,7 @@ Feature: list all courses
   I want to list all courses
 
   Scenario Outline: With course send correct data
+    Given I send a DELETE request to "/courses/<courseId>"
     Given I send a PUT request to "/courses/<courseId>" with body:
     """
     {

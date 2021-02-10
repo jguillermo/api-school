@@ -12,5 +12,10 @@ interface EnrollmentRepository
 
     public function deleteAllByCourseId($courseId);
 
+    /**
+     * @return Enrollment[]
+     */
+    public function findByCourse($courseId);
+
 
 }

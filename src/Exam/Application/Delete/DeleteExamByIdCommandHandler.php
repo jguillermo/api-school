@@ -12,11 +12,13 @@ use App\Shared\Domain\Bus\Query\QueryBus;
 class DeleteExamByIdCommandHandler implements CommandHandler
 {
     private $repository;
+    private $bus;
     private $queryBus;
 
-    public function __construct(ExamRepository $repository, QueryBus $queryBus)
+    public function __construct(ExamRepository $repository, EventBus $bus, QueryBus $queryBus)
     {
         $this->repository = $repository;
+        $this->bus = $bus;
         $this->queryBus = $queryBus;
     }
 
@@ -25,7 +27,13 @@ class DeleteExamByIdCommandHandler implements CommandHandler
         if($command->validate){
             $this->queryBus->ask(new FindCourseByIdQuery($command->courseId));
         }
+        $exam = $this->repository->findById($command->examId);
+        if ($exam == null) {
+            return;
+        }
+        $exam->delete();
         $this->repository->remove($command->examId);
+        $this->bus->publish(...$exam->pullDomainEvents());
         return;
     }
 }

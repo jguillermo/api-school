@@ -20,6 +20,10 @@ default:
             paths: [ tests/app/features/course_exam ]
             contexts:
                 - App\Tests\Shared\Infrastructure\Behat\ApiContext
+        grade:
+            paths: [ tests/app/features/grade ]
+            contexts:
+                - App\Tests\Shared\Infrastructure\Behat\ApiContext
 
     extensions:
         FriendsOfBehat\SymfonyExtension:

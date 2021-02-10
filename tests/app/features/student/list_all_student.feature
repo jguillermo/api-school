@@ -3,6 +3,7 @@ Feature: list all student
   I want to create o update one student
 
   Scenario Outline: With student send correct data
+    Given I send a DELETE request to "/students/<studentId>"
     Given I send a PUT request to "/students/<studentId>" with body:
     """
     {

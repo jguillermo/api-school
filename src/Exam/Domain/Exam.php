@@ -46,4 +46,9 @@ class Exam extends AggregateRoot
         $this->title = $title;
     }
 
+    public function delete()
+    {
+        $this->record(new ExamDeletedDomainEvent($this->id, $this->title, $this->courseId));
+    }
+
 }
