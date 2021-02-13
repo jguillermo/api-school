@@ -1,5 +1,5 @@
 # Demo API con Symfony
-Este ejemplo esta desarrollado con el paradigma de programacion Domain Driven Design DDD, para este ejemplo se tomó como dominio una escuela, despues de un análisis se obtibieron estos 5 módulos:
+Este ejemplo está desarrollado con el paradigma de programación Domain Driven Design DDD, para este ejemplo se tomó como dominio una escuela, después de un análisis se obtuvieron estos 5 módulos:
 
 - Cursos
 - Matrícula
@@ -7,7 +7,7 @@ Este ejemplo esta desarrollado con el paradigma de programacion Domain Driven De
 - Evaluaciones
 - Estudiantes
 
-Estos módulos tienen alta cohesión y bajo acoplamiento, la forma de comunicación entre ellos es con CQRS y Eventos de Dominio. Para poder reutilizar código se creo un modulo Share.
+Estos módulos tienen alta cohesión y bajo acoplamiento, la forma de comunicación entre ellos es con CQRS y Eventos de Dominio. Para poder reutilizar código se creó un módulo Share.
 ```
 📦src
  ┣ 📂Course
@@ -27,7 +27,7 @@ El controlador y los eventos acceden a los servicios a travez de CQRS.
  ┃ ┣ 📜CreateGradeOnExamCreated.php
  ┃ ┣ 📜...
 ```
-Vamos a analizar la estructura del proyecto, los controladores y eventos estan en el nameespace APP y los modulos es en name espace School.
+Vamos a analizar la estructura del proyecto, los controladores y eventos están en el namespace APP y los módulos es en namespace School.
 
 ## Iniciar el proyecto
 
@@ -64,7 +64,7 @@ make down
 
 ## Ejecutar las APIs
 
-Vamos a ejecutar las url paso a paso y vamos a explicar los eventos de dominio que se estan ejecutando.
+Vamos a ejecutar las url paso a paso y vamos a explicar los eventos de dominio que se están ejecutando.
 
 ### Creando un Alumno
 
@@ -76,7 +76,7 @@ curl --location --request PUT 'http://localhost:8080/students/362f79da-3e71-42ec
 }'
 ```
 
-Aqui creo que puede saltar una duda, ¿Por qué un put para crear un alumno, no es mejor un post?. aquí voy a intentar argumentarlo, se creó un servicio para colocar un alumno, si el alumno existe, pues, actualiza la data, y si no existe, lo crea.
+Aquí creo que puede saltar una duda, ¿Por qué un PUT para crear un alumno, no es mejor un POST?. Aquí voy a intentar argumentarlo, se creó un servicio para colocar un alumno, si el alumno existe, pues, actualiza la data, y si no existe, lo crea.
 
 ### Crear un curso
 
@@ -94,7 +94,7 @@ Aqui tambien estoy usando un PUT, y en el resto de endpoint de la demo, asi en e
 
 ### Crear un examen a un curso
 
-Aqui también por ser una demo, se crean evaluaciones por cada alumno matriculado en ese curso, con el modulo Exam. Tambien se crea la evaluacion de alumno en el modulo Grade cuando se crea el examen con el evento **CreateGradeOnExamCreated** y pode de nota 16 a todos los laumnos
+Aqui también por ser una demo, se crean evaluaciones por cada alumno matriculado en ese curso, con el módulo Exam. También se crea la evaluación de alumno en el módulo Grade cuando se crea el examen con el evento **CreateGradeOnExamCreated** y pone de nota 16 a todos los alumnos.
 
 ```bash
 curl --location --request PUT 'http://localhost:8080/courses/6fc897c4-d8f7-4880-8687-9642bb25c778/exams/5292df5d-5e51-4ea1-bf7e-22e623ffd175' \
@@ -123,9 +123,9 @@ la respuesta optenida es
 ]
 ```
 
-El estudiante, curso y examen, solo regresan los ids, una forma de colocar los valores, es creando un apigateway o usar cqrs para obtener la data, el problema de este último, es que el módulo tendria alto acoplamiento a los otros modulos y sería dificil mantener el código conforme el proyecto cresca.
+El estudiante, curso y examen, solo regresan los ids, una forma de colocar los valores, es creando un apigateway o usar CQRS para obtener la data, el problema de este último, es que el módulo tendria alto acoplamiento a los otros y sería dificil mantener el código conforme el proyecto crezca.
 
-### Ver los examenes de un curso
+### Ver los exámenes de un curso
 
 ```bash
 curl --location --request GET 'http://localhost:8080/courses/6fc897c4-d8f7-4880-8687-9642bb25c778/exams'
@@ -150,11 +150,11 @@ Vamos a eliminar el curso que acabamos de crear, con esto, se van a lanzar 3 eve
 curl --location --request DELETE 'http://localhost:8080/courses/6fc897c4-d8f7-4880-8687-9642bb25c778'
 ```
 
-Al eliminar este curso se lanzan los eventos antes mensionados, por ser una demo, se estan borrando de la DB, en un proyecto en produccion, deberiamos cambiar de estado a las diferentes entidades.
+Al eliminar este curso se lanzan los eventos antes mencionados, por ser una demo, se están borrando de la DB, en un proyecto en produccion, deberíamos cambiar de estado a las diferentes entidades.
 
 ## Test
 
-para este demo se trabajó con DBB con la libreria Behat, el test esta en la carpeta
+Para este demo se trabajó con DBB con la libreria Behat, el test esta en la carpeta
 ```
 📦tests
  ┣ 📂app
@@ -202,12 +202,12 @@ Feature: put course
 
 ## Arquitectura hexagonal en cada módulo
 
-Los modulos estan dentro de la carpeta src y modelan la logica de la escula, vamos a anlizar el modulo Course
+Los módulos estan dentro de la carpeta src y modelan la lógica de la escuela, vamos a analizar el módulo Course
 
 ![doc/arquitecturahexagonal.png](doc/arquitecturahexagonal.png)
 
-- **Infraestructura**: se encarga de guardar la data en Mysql.
-- **Application**: aqui estan todos nuestros casos de uso: Crear, Borrar, Buscar, los casos de uso estan implemnetados con CQRS, para que puedan ser usados desde otros lados del proyecto, desde un controlador, evento o otro caso de uso(aunque esta última forma no es muy recomendada).
+- **Infraestructura**: Se encarga de guardar la data en Mysql.
+- **Application**: Aquí están todos nuestros casos de uso: Crear, Borrar, Buscar, los casos de uso estan implemnetados con CQRS, para que puedan ser usados desde otros lados del proyecto, desde un controlador, evento o otro caso de uso(aunque esta última forma no es muy recomendada).
 - **Domain**: aqui se modelan los agregates, value object, eventos de dominio.
 ```
 📦Course
@@ -230,7 +230,7 @@ Los modulos estan dentro de la carpeta src y modelan la logica de la escula, vam
 ```
 ## Controlador
 
-El controlador y las clases que ejecutan los eventos de dominio estan en la carpeta app
+El controlador y las clases que ejecutan los eventos de dominio están en la carpeta app
 
 ```php
 	/**
@@ -249,20 +249,18 @@ El controlador y las clases que ejecutan los eventos de dominio estan en la carp
     }
 ```
 
-Los controladores mandan el Commad a Bus, con esto los controladores estan separados de los servicios, desacoplando de esta manera el controlador y los casos de uso.
+Los controladores mandan el Commad a Bus, con esto los controladores están separados de los servicios, desacoplando de esta manera el controlador y los casos de uso.
 
 ## Pipe line
 
-el código esta con Github Actions, se puede ver una demo del ultimo pase en [https://github.com/jguillermo/api-school/actions](https://github.com/jguillermo/api-school/actions)
+El código esta con Github Actions, se puede ver una demo del último pase en [https://github.com/jguillermo/api-school/actions](https://github.com/jguillermo/api-school/actions)
 
 ![doc/pipeline.png](doc/pipeline.png)
 
 ## ¿Por qué trabajar de esta forma?
 
-Es verdad que al inicio trabajar de esta forma toma más tiempo el desarrollar las aplicaciones, pero la flexibilidad e independencia que se logra, es para que este propyecto pueda crecer en el tiempo y no tener que pensar en reescribir la aplicaion porque ya se volvió imposible de mantener. Pero calma, hay una forma de trabajar de esta forma y aun asi obtener tiempos cortos en el desarrollo, hay una herramienta que genera código [https://www.npmjs.com/package/@cafeta/cli](https://www.npmjs.com/package/@cafeta/cli) lo he desarrollado hace algunos meses, pues bien ahora esta generando código en JAVA, pero al trabajar con plantillas, es facil que generre codigo en PHP. esa libreria me ayudó a crear esta demo. 
+Es verdad que al inicio trabajar de esta forma toma más tiempo el desarrollar las aplicaciones, pero la flexibilidad e independencia que se logra, es para que este propyecto pueda crecer en el tiempo y no tener que pensar en reescribir la aplicaion porque ya se volvió imposible de mantener. Pero calma, hay una forma de trabajar de esta forma y aun asi obtener tiempos cortos en el desarrollo, hay una herramienta que genera código [https://www.npmjs.com/package/@cafeta/cli](https://www.npmjs.com/package/@cafeta/cli) lo he desarrollado hace algunos meses, pues bien ahora esta generando código en JAVA, pero al trabajar con plantillas, es fácil que genere código en PHP. esta librería me ayudó a crear esta demo. 
 
 ## Conclusiones
 
-Fue interesante armar un skeleton con arquitectura hexagonal con Symfony 5, y php 7.4. y estoy feliz con el resultado, Synfony Messenger ayudó un montón para el CQRS y los eventos de dominio. Si bien faltó desarrollar mas puntos del reto, lo dejo aqui por ahora por falta de tiempo.
-
-##
+Fue interesante armar un skeleton con arquitectura hexagonal con Symfony 5, y php 7.4. y estoy feliz con el resultado, Synfony Messenger ayudó un montón para el CQRS y los eventos de dominio. Si bien faltó desarrollar mas puntos del reto, lo dejo aquí por ahora por falta de tiempo.
